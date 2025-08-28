@@ -1,0 +1,120 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #505050b0 0%, #222831 100%);
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+
+.container {
+    min-width: 340px;
+    max-width: 400px;
+    width: 90vw;
+    background: #393e46;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    padding: 32px 24px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.screen {
+    min-height: 70px;
+    background: #222831;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 16px 18px 8px 18px;
+    margin-bottom: 10px;
+    border: 1px solid #393e46;
+}
+
+input {
+    min-height: 28px;
+    width: 100%;
+    color: #fff;
+    font-size: 1.2rem;
+    background: transparent;
+    outline: none;
+    text-align: right;
+    display: block;
+    margin-bottom: 2px;
+    word-break: break-all;
+}
+
+#input-box {
+    color: #fff;
+}
+
+
+#result {
+    color: #e8e8e875;
+}
+
+/* Button grid */
+.btn-s {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    margin-top: 10px;
+    place-items: center;
+}
+
+button {
+    all: unset;
+    background: #00adb5;
+    color: #fff;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.10);
+    padding: 14px 0;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+button:hover,
+button:focus {
+    background: #008891;
+    transform: translateY(-2px) scale(1.04);
+}
+
+@media (max-width: 500px) {
+    .container {
+        min-width: 90vw;
+        padding: 12px 4px 16px 4px;
+    }
+
+    .screen {
+        padding: 8px 6px 4px 6px;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 10px 0;
+    }
+}
+
+
+h2{
+    text-align: center;
+    color: white;
+    padding: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 1.6rem;
+}

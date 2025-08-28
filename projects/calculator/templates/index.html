@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator with Python | Flask</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <form action="/calculate" method="post">
+            <h2>Calculator</h2>
+            <div class="screen">
+                {% if result is defined %}
+                <input id="input-box" value="{{ result }}" name="input" readonly>
+                {% else %}
+                <input id="input-box" value="0" name="input">
+                {% endif %}
+            </div>
+            <div class="btn-s">
+                <button type="button" onclick="addValue('')">AC</button>
+                <button type="button" onclick="addValue('1')">1</button>
+                <button type="button" onclick="addValue('2')">2</button>
+                <button type="button" onclick="addValue('3')">3</button>
+                <button type="button" onclick="addValue('+')">+</button>
+                <button type="button" onclick="addValue('4')">4</button>
+                <button type="button" onclick="addValue('5')">5</button>
+                <button type="button" onclick="addValue('6')">6</button>
+                <button type="button" onclick="addValue('7')">7</button>
+                <button type="button" onclick="addValue('-')">-</button>
+                <button type="button" onclick="addValue('8')">8</button>
+                <button type="button" onclick="addValue('9')">9</button>
+                <button type="button" onclick="addValue('0')">0</button>
+                <button type="button" onclick="addValue('.')">.</button>
+                <button type="button" onclick="addValue('/')">/</button>
+                <button type="button" onclick="addValue('*')">*</button>
+                <button type="button" onclick="addValue('(')">(</button>
+                <button type="button" onclick="addValue(')')">)</button>
+                <button type="button" onclick="addValue('%')">%</button>
+                <button type="submit">=</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="{{ url_for('static', filename='min.js') }}"></script>
+</body>
+
+</html>
