@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Preview</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="preview-card">
+        <h2>🎉 Background Removed!</h2>
+        <p>Here’s your processed image:</p>
+
+        <!-- Display the image -->
+        <div class="img-preview">
+            <img src="{{ url_for('static', filename='downloads/' + filename) }}" alt="Processed Image">
+        </div>
+
+        <!-- Download button -->
+        <a href="{{ url_for('static', filename='downloads/' + filename) }}" download class="btn">
+            ⬇️ Download Image
+        </a>
+
+        <!-- Back home -->
+        <a href="/" class="btn secondary">🏠 Back Home</a>
+    </div>
+</body>
+</html>
